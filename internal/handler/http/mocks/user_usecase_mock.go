@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/domain/entity"
-	usecasecontract "github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/usecase/contract"
+	"github.com/mikiasgoitom/Articulate/internal/domain/entity"
+	usecasecontract "github.com/mikiasgoitom/Articulate/internal/usecase/contract"
 )
 
 // MockUserUsecase is a mock implementation of the UserUsecase interface

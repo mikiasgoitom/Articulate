@@ -8,11 +8,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/domain/contract"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/domain/entity"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/infrastructure/metrics"
-	usecasecontract "github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/usecase/contract"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/utils"
+	"github.com/mikiasgoitom/Articulate/internal/domain/contract"
+	"github.com/mikiasgoitom/Articulate/internal/domain/entity"
+	"github.com/mikiasgoitom/Articulate/internal/infrastructure/metrics"
+	usecasecontract "github.com/mikiasgoitom/Articulate/internal/usecase/contract"
+	"github.com/mikiasgoitom/Articulate/internal/utils"
 )
 
 // IBlogUseCase defines blog-related business logic

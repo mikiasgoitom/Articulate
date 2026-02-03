@@ -10,9 +10,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
-	handler "github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/handler/http"
-	dto "github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/handler/http/dto"
-	mocks "github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/handler/http/mocks"
+	handler "github.com/mikiasgoitom/Articulate/internal/handler/http"
+	dto "github.com/mikiasgoitom/Articulate/internal/handler/http/dto"
+	mocks "github.com/mikiasgoitom/Articulate/internal/handler/http/mocks"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -8,7 +8,7 @@ import (
 
 	"github.com/gin-gonic/gin/binding"
 	"github.com/go-playground/validator/v10"
-	usecasecontract "github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/usecase/contract"
+	usecasecontract "github.com/mikiasgoitom/Articulate/internal/usecase/contract"
 )
 
 // AppValidator implements the usecase.Validator interface.

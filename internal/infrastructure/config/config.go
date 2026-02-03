@@ -1,10 +1,11 @@
 package config
 
 import (
-	usecasecontract "github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/usecase/contract"
 	"os"
 	"strconv"
 	"time"
+
+	usecasecontract "github.com/mikiasgoitom/Articulate/internal/usecase/contract"
 )
 
 // Config holds application configuration values.

@@ -7,16 +7,17 @@ import (
 	"github.com/didip/tollbooth/v7/limiter"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/domain/contract"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/handler/http/middleware"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/usecase"
-	usecasecontract "github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/usecase/contract"
+	"github.com/mikiasgoitom/Articulate/internal/domain/contract"
+	"github.com/mikiasgoitom/Articulate/internal/handler/http/middleware"
+	"github.com/mikiasgoitom/Articulate/internal/usecase"
+	usecasecontract "github.com/mikiasgoitom/Articulate/internal/usecase/contract"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 
 type Router struct {
 	userHandler        *UserHandler
 	blogHandler        *BlogHandler
+	aiHandler          *AIHandler
 	emailHandler       *EmailHandler
 	interactionHandler *InteractionHandler
 	userUsecase        *usecase.UserUsecase
@@ -25,12 +26,13 @@ type Router struct {
 	commentHandler     *CommentHandler
 }
 
-func NewRouter(userUsecase usecasecontract.IUserUseCase, blogUsecase usecase.IBlogUseCase, likeUsecase *usecase.LikeUsecase, emailVerUC usecasecontract.IEmailVerificationUC, userRepo contract.IUserRepository, tokenRepo contract.ITokenRepository, hasher contract.IHasher, jwtService usecase.JWTService, mailService contract.IEmailService, logger usecasecontract.IAppLogger, config usecasecontract.IConfigProvider, validator usecasecontract.IValidator, uuidGen contract.IUUIDGenerator, randomGen contract.IRandomGenerator, commentRepo contract.ICommentRepository, blogRepo contract.IBlogRepository) *Router {
+func NewRouter(userUsecase usecasecontract.IUserUseCase, blogUsecase usecase.IBlogUseCase, likeUsecase *usecase.LikeUsecase, emailVerUC usecasecontract.IEmailVerificationUC, userRepo contract.IUserRepository, tokenRepo contract.ITokenRepository, hasher contract.IHasher, jwtService usecase.JWTService, mailService contract.IEmailService, logger usecasecontract.IAppLogger, config usecasecontract.IConfigProvider, validator usecasecontract.IValidator, uuidGen contract.IUUIDGenerator, randomGen contract.IRandomGenerator, commentRepo contract.ICommentRepository, blogRepo contract.IBlogRepository, aiUsecase usecasecontract.IAIUseCase) *Router {
 	baseURL := config.GetAppBaseURL()
 	commentUC := usecase.NewCommentUseCase(commentRepo, blogRepo, userRepo)
 	return &Router{
 		userHandler:        NewUserHandler(userUsecase),
 		blogHandler:        NewBlogHandler(blogUsecase),
+		aiHandler:          NewAIHandler(aiUsecase),
 		emailHandler:       NewEmailHandler(emailVerUC, userRepo),
 		interactionHandler: NewInteractionHandler(likeUsecase),
 		userUsecase:        usecase.NewUserUsecase(userRepo, tokenRepo, emailVerUC, hasher, jwtService, mailService, logger, config, validator, uuidGen, randomGen),
@@ -102,6 +104,8 @@ func (r *Router) SetupRoutes(router *gin.Engine) {
 
 		// Blog routes
 		protected.POST("/blogs", r.blogHandler.CreateBlogHandler)
+		protected.POST("/blogs/generateBlog", r.aiHandler.HandleBlogContentGeneration)
+		protected.POST("/blogs/suggestModificationByAI", r.aiHandler.HandleSuggestAndModifyContent)
 		protected.PUT("/blogs/:blogID", r.blogHandler.UpdateBlogHandler)
 		protected.DELETE("/blogs/:blogID", r.blogHandler.DeleteBlogHandler)
 

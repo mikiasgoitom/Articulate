@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/domain/contract"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/domain/entity"
-	usecasecontract "github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/usecase/contract"
+	"github.com/mikiasgoitom/Articulate/internal/domain/contract"
+	"github.com/mikiasgoitom/Articulate/internal/domain/entity"
+	usecasecontract "github.com/mikiasgoitom/Articulate/internal/usecase/contract"
 	"golang.org/x/crypto/bcrypt"
 )
 
@@ -587,6 +587,7 @@ func (uc *UserUsecase) LoginWithOAuth(ctx context.Context, firstName, lastName, 
 			Email:        email,
 			PasswordHash: "", // No password for OAuth users
 			Role:         entity.UserRoleUser,
+			IsVerified:   true,
 			IsActive:     true, // OAuth users are active by default
 			AvatarURL:    nil,
 			CreatedAt:    time.Now(),

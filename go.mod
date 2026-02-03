@@ -1,4 +1,4 @@
-module github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project
+module github.com/mikiasgoitom/Articulate
 
 go 1.24.4
 

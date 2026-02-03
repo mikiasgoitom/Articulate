@@ -8,7 +8,7 @@ To get started, you need to create your own copy of the main project repository.
 
 ### Step 1: Fork the Repository
 
-1. Navigate to the main project repository: [https://github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project](https://github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project)
+1. Navigate to the main project repository: [https://github.com/mikiasgoitom/Articulate](https://github.com/mikiasgoitom/Articulate)
 2. Click the **"Fork"** button in the top-right corner. This will create a copy of the repository under your own GitHub account.
 
 ### Step 2: Clone Your Fork
@@ -16,8 +16,8 @@ To get started, you need to create your own copy of the main project repository.
 Clone the forked repository (your copy) to your local machine. Replace `<Your-GitHub-Username>` with your actual username.
 
 ```bash
-git clone https://github.com/<Your-GitHub-Username>/A2SV-Backend-Blog-Starter-Project.git
-cd A2SV-Backend-Blog-Starter-Project
+git clone https://github.com/<Your-GitHub-Username>/Articulate.git
+cd Articulate
 ```
 
 ### Step 3: Add the `upstream` Remote
@@ -25,7 +25,7 @@ cd A2SV-Backend-Blog-Starter-Project
 Add the original project repository as a remote named `upstream`. This allows you to pull in changes from the main project to keep your fork updated.
 
 ```bash
-git remote add upstream https://github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project.git
+git remote add upstream https://github.com/mikiasgoitom/Articulate.git
 ```
 
 ### Step 4: Verify Remotes
@@ -39,10 +39,10 @@ git remote -v
 You should see output similar to this:
 
 ```bash
-origin    https://github.com/<Your-GitHub-Username>/A2SV-Backend-Blog-Starter-Project.git (fetch)
-origin    https://github.com/<Your-GitHub-Username>/A2SV-Backend-Blog-Starter-Project.git (push)
-upstream  https://github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project.git (fetch)
-upstream  https://github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project.git (push)
+origin    https://github.com/<Your-GitHub-Username>/Articulate.git (fetch)
+origin    https://github.com/<Your-GitHub-Username>/Articulate.git (push)
+upstream  https://github.com/mikiasgoitom/Articulate.git (fetch)
+upstream  https://github.com/mikiasgoitom/Articulate.git (push)
 ```
 
 ### Step 5: Keep Your Fork Synced
@@ -138,9 +138,7 @@ Your PR is your request to merge your code into the `develop` branch. Make it ea
   - At least **one** team member must review and approve your PR.
   - Address all comments and feedback from your reviewers. Push new commits to your branch to update the PR.
 - **Merging Strategy**: Once approved, the PR will be merged into `develop`. The choice of merge method depends on the situation.
-
   - **Squash and Merge (Default for Feature Branches)**:
-
     - **What it does**: Combines all of your PR's commits into a single commit on the `develop` branch.
     - **When to use**: This is our default method for merging feature and bugfix branches. It keeps the `develop` branch history clean and easy to read, as each PR is represented by a single, meaningful commit.
 

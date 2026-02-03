@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/domain/contract"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/domain/entity"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/infrastructure/uuidgen"
+	"github.com/mikiasgoitom/Articulate/internal/domain/contract"
+	"github.com/mikiasgoitom/Articulate/internal/domain/entity"
+	"github.com/mikiasgoitom/Articulate/internal/infrastructure/uuidgen"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"

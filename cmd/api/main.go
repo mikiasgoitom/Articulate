@@ -7,20 +7,20 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
-	handlerHttp "github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/handler/http"
-	redisclient "github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/infrastructure/cache"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/infrastructure/config"
-	database "github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/infrastructure/database"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/infrastructure/external_services"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/infrastructure/jwt"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/infrastructure/logger"
-	passwordservice "github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/infrastructure/password_service"
-	randomgenerator "github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/infrastructure/random_generator"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/infrastructure/repository/mongodb"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/infrastructure/store"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/infrastructure/uuidgen"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/infrastructure/validator"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/usecase"
+	handlerHttp "github.com/mikiasgoitom/Articulate/internal/handler/http"
+	redisclient "github.com/mikiasgoitom/Articulate/internal/infrastructure/cache"
+	"github.com/mikiasgoitom/Articulate/internal/infrastructure/config"
+	database "github.com/mikiasgoitom/Articulate/internal/infrastructure/database"
+	"github.com/mikiasgoitom/Articulate/internal/infrastructure/external_services"
+	"github.com/mikiasgoitom/Articulate/internal/infrastructure/jwt"
+	"github.com/mikiasgoitom/Articulate/internal/infrastructure/logger"
+	passwordservice "github.com/mikiasgoitom/Articulate/internal/infrastructure/password_service"
+	randomgenerator "github.com/mikiasgoitom/Articulate/internal/infrastructure/random_generator"
+	"github.com/mikiasgoitom/Articulate/internal/infrastructure/repository/mongodb"
+	"github.com/mikiasgoitom/Articulate/internal/infrastructure/store"
+	"github.com/mikiasgoitom/Articulate/internal/infrastructure/uuidgen"
+	"github.com/mikiasgoitom/Articulate/internal/infrastructure/validator"
+	"github.com/mikiasgoitom/Articulate/internal/usecase"
 )
 
 func main() {
@@ -109,7 +109,7 @@ func main() {
 		userUsecase, blogUsecase, likeUsecase, emailUsecase,
 		userRepo, tokenRepo, hasher, jwtService, mailService,
 		appLogger, appConfig, appValidator, uuidGenerator, randomGenerator,
-		commentRepo, blogRepo,
+		commentRepo, blogRepo, aiUsecase,
 	)
 	appRouter.SetupRoutes(router)
 

@@ -3,7 +3,7 @@ package logger
 import (
 	"log"
 
-	usecasecontract "github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/usecase/contract"
+	usecasecontract "github.com/mikiasgoitom/Articulate/internal/usecase/contract"
 )
 
 // StdLogger is a simple logger that uses the standard log package.

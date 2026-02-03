@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/domain/entity"
-	usecase "github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/usecase"
+	"github.com/mikiasgoitom/Articulate/internal/domain/entity"
+	usecase "github.com/mikiasgoitom/Articulate/internal/usecase"
 )
 
 type InteractionHandler struct {

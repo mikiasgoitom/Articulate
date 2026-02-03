@@ -5,8 +5,8 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/usecase"
-	usecasecontract "github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/usecase/contract"
+	"github.com/mikiasgoitom/Articulate/internal/usecase"
+	usecasecontract "github.com/mikiasgoitom/Articulate/internal/usecase/contract"
 )
 
 func AuthMiddleWare(jwtService usecase.JWTService, userUseCase usecasecontract.IUserUseCase) gin.HandlerFunc {

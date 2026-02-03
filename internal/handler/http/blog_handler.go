@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/domain/entity"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/handler/http/dto"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/usecase"
+	"github.com/mikiasgoitom/Articulate/internal/domain/entity"
+	"github.com/mikiasgoitom/Articulate/internal/handler/http/dto"
+	"github.com/mikiasgoitom/Articulate/internal/usecase"
 )
 
 // BlogHandlerInterface defines the methods for Blog handler to allow interface-based dependency injection (for testing/mocking)

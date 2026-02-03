@@ -2,7 +2,8 @@ package usecasecontract
 
 import (
 	"context"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/dto"
+
+	"github.com/mikiasgoitom/Articulate/internal/dto"
 )
 
 type ICommentUseCase interface {

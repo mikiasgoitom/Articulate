@@ -8,8 +8,8 @@ import (
 
 	"github.com/redis/go-redis/v9"
 
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/domain/contract"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/domain/entity"
+	"github.com/mikiasgoitom/Articulate/internal/domain/contract"
+	"github.com/mikiasgoitom/Articulate/internal/domain/entity"
 )
 
 type BlogCacheStore struct {

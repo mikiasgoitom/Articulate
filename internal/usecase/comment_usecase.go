@@ -9,10 +9,10 @@ import (
 
 	// "time"
 
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/domain/contract"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/domain/entity"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/dto"
-	usecasecontract "github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/usecase/contract"
+	"github.com/mikiasgoitom/Articulate/internal/domain/contract"
+	"github.com/mikiasgoitom/Articulate/internal/domain/entity"
+	"github.com/mikiasgoitom/Articulate/internal/dto"
+	usecasecontract "github.com/mikiasgoitom/Articulate/internal/usecase/contract"
 )
 
 type commentUseCase struct {

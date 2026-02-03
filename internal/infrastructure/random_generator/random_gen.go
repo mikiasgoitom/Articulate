@@ -5,7 +5,7 @@ import (
 	"encoding/base64"
 	"fmt"
 
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/domain/contract"
+	"github.com/mikiasgoitom/Articulate/internal/domain/contract"
 )
 
 type RandomGenerator struct{}

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/smtp"
 
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/domain/contract"
+	"github.com/mikiasgoitom/Articulate/internal/domain/contract"
 )
 
 // smtp attribute

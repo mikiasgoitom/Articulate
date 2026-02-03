@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/domain/entity"
+	"github.com/mikiasgoitom/Articulate/internal/domain/entity"
 )
 
 // SortOrder defines sorting direction for list queries

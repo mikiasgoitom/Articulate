@@ -1,7 +1,7 @@
 package usecase
 
 import (
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/domain/entity"
+	"github.com/mikiasgoitom/Articulate/internal/domain/entity"
 )
 
 // JWTService defines the interface for JWT operations.

@@ -2,7 +2,7 @@ package uuidgen
 
 import (
 	"github.com/google/uuid"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/domain/contract"
+	"github.com/mikiasgoitom/Articulate/internal/domain/contract"
 )
 
 // Generator implements the usecase.UUIDGenerator interface.

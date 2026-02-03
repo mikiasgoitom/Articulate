@@ -10,7 +10,7 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	usecasecontract "github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/usecase/contract"
+	usecasecontract "github.com/mikiasgoitom/Articulate/internal/usecase/contract"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/google"
 )
@@ -64,7 +64,8 @@ func (h *AuthHandler) HandleGoogleCallback(ctx *gin.Context) {
 
 	code := ctx.Query("code")
 	if code == "" {
-		ctx.String(http.StatusBadRequest, "autheriztion code not provided")
+		ctx.String(http.StatusBadRequest, "authorization code not provided")
+		return
 	}
 
 	requestCtx := ctx.Request.Context()

@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/mikiasgoitom/A2SV-Backend-Blog-Starter-Project/internal/handler/http/dto"
+	"github.com/mikiasgoitom/Articulate/internal/handler/http/dto"
 )
 
 // ErrorHandler centralizes error handling for HTTP responses
